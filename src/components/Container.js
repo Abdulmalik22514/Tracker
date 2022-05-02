@@ -5,7 +5,7 @@ import Header from './Header';
 const Container = ({heading, children}) => {
   return (
     <View style={styles.container}>
-      <ScrollView>
+      <ScrollView showsVerticalScrollIndicator={false}>
         <Header heading={heading} />
         {children}
       </ScrollView>
