@@ -6,7 +6,7 @@ import HomeCard from '../../components/HomeCard';
 import CustomButton from '../../components/CustomButton';
 import {HomeStyles as styles} from './styles';
 
-const HomePage = () => {
+const HomePage = ({navigation}) => {
   return (
     <>
       <Container heading="Home Page">
@@ -19,7 +19,10 @@ const HomePage = () => {
         </View>
         <View style={styles.homeCard}>
           <HomeCard title="Settings" />
-          <HomeCard title="History" />
+          <HomeCard
+            title="History"
+            onPress={() => navigation.navigate('History')}
+          />
         </View>
         <CustomButton style={styles.button} />
       </Container>
