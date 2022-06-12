@@ -2,8 +2,7 @@ import React from 'react';
 import {View, StyleSheet} from 'react-native';
 import CustomButton from '../../components/CustomButton';
 import CustomInput from '../../components/CustomInput';
-import {COLORS} from '../../constants/colors';
-import {hp} from '../../constants/utils';
+import {COLORS, SIZES} from '../../constants';
 
 const Login = ({navigation}) => {
   return (
@@ -21,7 +20,7 @@ const Login = ({navigation}) => {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    paddingTop: hp(55),
+    paddingTop: SIZES.font1 * 2,
     backgroundColor: COLORS.white,
   },
 });
