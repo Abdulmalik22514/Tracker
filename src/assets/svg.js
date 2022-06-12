@@ -22,3 +22,16 @@ export const LocationPin = props => {
     </Svg>
   );
 };
+
+export const Tick = props => {
+  return (
+    <Svg width="20" height="22" viewBox="0 0 16 17" fill="none" {...props}>
+      <Path
+        d="M12.5713 4.61441L6.28561 10.9001L3.42847 8.04298"
+        stroke="white"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+      />
+    </Svg>
+  );
+};
