@@ -20,7 +20,10 @@ const HomePage = ({navigation}) => {
             <Text style={styles.latitude}>Longitude</Text>
           </View>
           <View style={styles.homeCard}>
-            <HomeCard title="Settings" />
+            <HomeCard
+              title="Settings"
+              onPress={() => navigation.navigate('Settings')}
+            />
             <HomeCard
               title="History"
               onPress={() => navigation.navigate('History')}
