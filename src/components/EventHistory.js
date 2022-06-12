@@ -1,13 +1,8 @@
 import {View, Text, StyleSheet} from 'react-native';
 import React from 'react';
 import {hp, wp} from '../constants/utils';
-import {COLORS} from '../constants/colors';
-
-// export const EventHistory = [
-//   {
-//     title: 'Damon Perez',
-//   },
-// ];
+import {COLORS, SIZES} from '../constants';
+import {FONTS} from '../constants/theme';
 
 const EventHistoryCard = () => {
   return (
@@ -24,12 +19,12 @@ const EventHistoryCard = () => {
         </View>
       </View>
       <View style={styles.durationCont}>
-        <Text style={styles.lat}>Duration</Text>
-        <Text style={styles.lat}>12:45:52</Text>
+        <Text style={styles.duration}>Duration</Text>
+        <Text style={styles.duration}>12:45:52</Text>
       </View>
       <View style={styles.durationCont}>
-        <Text style={styles.lat}>23 June 2019</Text>
-        <Text style={styles.lat}>17:56</Text>
+        <Text style={styles.duration}>23 June 2019</Text>
+        <Text style={styles.duration}>17:56</Text>
       </View>
     </View>
   );
@@ -38,20 +33,32 @@ const EventHistoryCard = () => {
 const styles = StyleSheet.create({
   container: {
     backgroundColor: COLORS.grey,
-    paddingHorizontal: wp(7),
-    paddingVertical: hp(20),
-    marginHorizontal: wp(17),
-    marginVertical: hp(23),
+    paddingHorizontal: SIZES.font10,
+    paddingVertical: SIZES.font8,
+    marginTop: SIZES.font1,
     borderRadius: 10,
+    shadowColor: COLORS.ash,
+    shadowOffset: {
+      width: 0,
+      height: 1,
+    },
+    shadowOpacity: 0.3,
+    shadowRadius: 1,
+    elevation: 1,
   },
-  duration: {},
   lat: {
     color: COLORS.white,
-    fontSize: hp(20),
+    ...FONTS.body7,
+    fontWeight: '600',
+  },
+  duration: {
+    color: COLORS.white,
+    ...FONTS.body7,
+    fontWeight: '400',
   },
   latitude: {
     color: COLORS.white,
-    fontSize: hp(18),
+    ...FONTS.body7,
     alignSelf: 'center',
   },
   locationContainer: {
@@ -60,12 +67,12 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'space-between',
     flexDirection: 'row',
-    marginVertical: hp(20),
-    padding: wp(8),
+    marginVertical: SIZES.font9,
+    padding: SIZES.font10,
   },
   name: {
     color: COLORS.white,
-    fontSize: hp(21),
+    ...FONTS.body5,
   },
   durationCont: {
     flexDirection: 'row',

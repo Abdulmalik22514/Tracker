@@ -1,9 +1,9 @@
 import {View, Text, StyleSheet, TouchableOpacity} from 'react-native';
 import React from 'react';
-import {hp, wp} from '../constants/utils';
 import {ArrowBack} from '../assets/svg';
 import {useNavigation} from '@react-navigation/native';
-import {COLORS} from '../constants/colors';
+import {COLORS, SIZES} from '../constants';
+import {FONTS} from '../constants/theme';
 
 const Header = ({heading}) => {
   const navigation = useNavigation();
@@ -22,13 +22,14 @@ const styles = StyleSheet.create({
   container: {
     flexDirection: 'row',
     alignItems: 'center',
-    paddingHorizontal: wp(18),
+    paddingHorizontal: SIZES.font9,
     justifyContent: 'space-between',
     backgroundColor: COLORS.grey,
-    height: hp(70),
+    height: SIZES.font10 * 6.5,
+    width: '100%',
   },
   heading: {
-    fontSize: hp(20),
+    ...FONTS.body5,
     fontWeight: '500',
     color: COLORS.white,
   },

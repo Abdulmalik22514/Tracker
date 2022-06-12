@@ -1,7 +1,7 @@
 import {Text, StyleSheet, TouchableOpacity} from 'react-native';
 import React from 'react';
-import {hp, wp} from '../constants/utils';
-import {COLORS} from '../constants/colors';
+import {COLORS, SIZES} from '../constants';
+import {FONTS} from '../constants/theme';
 
 const HomeCard = ({title, onPress}) => {
   return (
@@ -18,15 +18,14 @@ const styles = StyleSheet.create({
   container: {
     alignItems: 'center',
     justifyContent: 'center',
-    paddingHorizontal: wp(49),
-    paddingVertical: hp(39),
+    paddingHorizontal: SIZES.font1 * 1.7,
+    paddingVertical: SIZES.font2 * 1.2,
     backgroundColor: COLORS.grey,
     borderRadius: 10,
-    width: wp(165),
   },
   title: {
     color: COLORS.white,
-    fontSize: hp(18),
+    ...FONTS.body6,
     fontWeight: '500',
   },
 });

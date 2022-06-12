@@ -1,7 +1,7 @@
 import {Text, TouchableOpacity, StyleSheet} from 'react-native';
 import React from 'react';
-import {hp, wp} from '../constants/utils';
-import {COLORS} from '../constants/colors';
+import {COLORS, SIZES} from '../constants';
+import {FONTS} from '../constants/theme';
 
 const CustomButton = ({onPress, title, style}) => {
   return (
@@ -17,16 +17,16 @@ const CustomButton = ({onPress, title, style}) => {
 const styles = StyleSheet.create({
   container: {
     backgroundColor: COLORS.orange,
-    height: hp(50),
+    height: SIZES.font7 * 3.1,
     alignItems: 'center',
     justifyContent: 'center',
-    marginHorizontal: wp(41),
-    marginTop: hp(90),
+    marginHorizontal: SIZES.font1 * 1.4,
+    marginTop: SIZES.font1 * 3,
     borderRadius: 10,
   },
   buttonTitle: {
     color: COLORS.white,
-    fontSize: hp(17),
+    ...FONTS.body5,
   },
 });
 
