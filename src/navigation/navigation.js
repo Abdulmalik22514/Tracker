@@ -6,6 +6,8 @@ import Login from '../screens/Login/login';
 import HomePage from '../screens/Home/home';
 import History from '../screens/History/history';
 import {COLORS} from '../constants';
+import Settings from '../screens/Settings/settings';
+import ShareLocation from '../screens/ShareLocation/shareLocation';
 
 const Stack = createNativeStackNavigator();
 
@@ -17,6 +19,8 @@ function Navigator() {
         <Stack.Screen name="Login" component={Login} />
         <Stack.Screen name="Home" component={HomePage} />
         <Stack.Screen name="History" component={History} />
+        <Stack.Screen name="Settings" component={Settings} />
+        <Stack.Screen name="ShareLocation" component={ShareLocation} />
       </Stack.Navigator>
     </NavigationContainer>
   );
