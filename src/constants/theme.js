@@ -6,13 +6,13 @@ export const COLORS = {
   // primary colors
   primary: '#1648CE',
   secondary: '#929CAD',
-  tertiary: '#FCF9FF',
   white: '#FFFFFF',
   grey: '#242424',
   black: '#000000',
   yellow: '#FAB613',
   orange: '#D52323',
   ash: '#E7E7E7',
+  tertiary: 'rgba(255, 255, 255, 0.4)',
 };
 export const SIZES = {
   // font sizes
