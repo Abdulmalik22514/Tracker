@@ -1,4 +1,10 @@
-import {StyleSheet, Text, View, TextInput, Pressable} from 'react-native';
+import {
+  StyleSheet,
+  Text,
+  View,
+  TextInput,
+  TouchableOpacity,
+} from 'react-native';
 import React, {useState} from 'react';
 import Container from '../../components/Container';
 import {COLORS, SIZES} from '../../constants';
@@ -22,9 +28,12 @@ const ShareLocation = () => {
         </View>
         <View style={styles.selectAllBox}>
           <Text style={styles.doneText}>Select all</Text>
-          <Pressable
+          <TouchableOpacity
+            activeOpacity={0.9}
             style={styles.checkBox}
-            onPress={checked ? <Tick /> : null}></Pressable>
+            onPress={() => setChecked(!checked)}>
+            {checked ? <Tick /> : null}
+          </TouchableOpacity>
         </View>
         {Users.map((item, index) => {
           return (

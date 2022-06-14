@@ -21,7 +21,7 @@ const Settings = ({navigation}) => {
           }>
           <Text style={styles.notification}>Share Location</Text>
           <Switch
-            trackColor={{false: 'red', true: COLORS.white}}
+            trackColor={{false: COLORS.white, true: COLORS.white}}
             thumbColor={isEnabled ? COLORS.black : 'white'}
             ios_backgroundColor={COLORS.white}
             onValueChange={toggleSwitch}

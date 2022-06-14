@@ -14,7 +14,7 @@ const Stack = createNativeStackNavigator();
 function Navigator() {
   return (
     <NavigationContainer>
-      <StatusBar translucent={false} backgroundColor={COLORS.grey} />
+      <StatusBar translucent={false} backgroundColor={COLORS.black} />
       <Stack.Navigator screenOptions={{headerShown: false}}>
         <Stack.Screen name="Login" component={Login} />
         <Stack.Screen name="Home" component={HomePage} />
