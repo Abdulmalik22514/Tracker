@@ -10,7 +10,7 @@ import {COLORS, SIZES} from '../constants';
 import {FONTS} from '../constants/theme';
 
 const CustomInput = ({label, placeholder, value, onChange, isPassword}) => {
-  const [show, setShow] = useState(false);
+  const [show, setShow] = useState(true);
   return (
     <View style={styles.container}>
       <Text style={styles.label}>{label}</Text>
