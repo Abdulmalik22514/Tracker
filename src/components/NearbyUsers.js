@@ -3,6 +3,7 @@ import React from 'react';
 import {COLORS, icons, SIZES} from '../constants';
 import {Tick} from '../assets/svg';
 import {FONTS} from '../constants/theme';
+import {useNavigation} from '@react-navigation/native';
 
 export const Users = [
   {
@@ -38,8 +39,12 @@ export const Users = [
 ];
 
 const NearbyUsers = ({icon, user, distance, onPress, isChecked}) => {
+  const navigation = useNavigation();
   return (
-    <View style={styles.container}>
+    <TouchableOpacity
+      style={styles.container}
+      activeOpacity={0.9}
+      onPress={() => navigation.navigate('Map')}>
       <View style={styles.userIcon}>
         <Image source={icon} style={styles.icon} />
         <View>
@@ -54,7 +59,7 @@ const NearbyUsers = ({icon, user, distance, onPress, isChecked}) => {
         style={styles.checkBox}>
         {isChecked ? <Tick /> : null}
       </TouchableOpacity>
-    </View>
+    </TouchableOpacity>
   );
 };
 
